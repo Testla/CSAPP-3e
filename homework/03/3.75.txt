@@ -1,0 +1,6 @@
+A.
+Real part in first available floating point register,
+imagine part in second available floating point register.
+
+B.
+Real part in xmm0, imagine part in xmm1.

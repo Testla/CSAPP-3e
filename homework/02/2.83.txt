@@ -1,0 +1,9 @@
+A.
+Let the fraction number be f.
+Y / (2 ^ k - 1)
+
+B.
+(a) 5 / 7
+(b) 6 / 15
+(c) 19 / 63
+

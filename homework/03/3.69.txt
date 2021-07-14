@@ -1,0 +1,16 @@
+A.
+From line 1, offset of b_struct.last is 0x120, i.e. 288.
+From line 4, 5 and 6, bp->a[i] is at bp + 40 * i + 8.
+So size of a_strcut is 40.
+288 = 40 * CNT + 8, CNT = 7.
+
+B.
+From line 6, idx is of type long.
+From line 7 and 8, a_struct.x is of type long, offset of a_struct.idx is 0x10 - 0x8 = 8.
+(40 - 8) / 8 = 4
+
+typedef struct {
+    long idx;
+    long x[4];
+} a_struct;
+

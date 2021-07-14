@@ -1,0 +1,7 @@
+A. &A[i][j][k] = A + 8 * (i * S * T + j * T + k)
+
+B.
+The address used to retrive A[i][j][k] is A + 8 * (65 * i + 13 * j + k).
+sizeof(A) is 3640.
+T = 13, S = 65 / 13 = 5, R = 3640 / 65 / 8 = 7.
+

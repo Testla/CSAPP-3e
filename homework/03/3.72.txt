@@ -1,0 +1,15 @@
+A.
+Line 5 and 6 computes (8 * n + 30) & -16, that is (8 * n + 30) with the lowest 4 bits set to 0, so it will be a multiple of 16. Size of array element is 8, 30 is added to ensure there is enough space after rounding.
+
+B.
+Line 8 and 9 computes (rsp + 15) & -16, this rounds rsp to the first multiple of 16 not less than rsp.
+
+C.
+e1 = size_of_allocated_space - e2
+Rounding of the former happens at line 6, and the latter at line 9.
+When we want e1 to be minimum, we want (a) The former to be minimum, that is (8 * n + 30) % 16 be as large as possible, so n is even, say n = 2. (b) e2 be maximum, so s2 % 16 = 1, say s2 = 161, s1 = 161 + (8 * n + 30) % 16 = 193.
+The process is similar when we want e2 to be maximum.
+When n = 2 and s1 = 193, allocated size is (8 * 2 + 30) % 16 = 32, s2 = (193 - 32 + 15) & -16 = 176, e1 = 193 - (176 + 2 * 8) = 1.
+When n = 1 and s1 = 192, allocated size is (8 * 1 + 30) % 16 = 32, s2 = (192 - 32 + 15) & -16 = 160, e1 = 192 - (160 + 1 * 8) = 24.
+
+D. Both align to multiple of 16.

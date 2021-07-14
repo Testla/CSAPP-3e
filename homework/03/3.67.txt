@@ -1,0 +1,46 @@
+A.
+
++-------+
+|       |
++-------+
+|   z   | 24
++-------+
+|   &z  | 16
++-------+
+|s.a[1] | 8
++-------+
+|s.a[0] | 0 rsp
++-------+
+
+B.
+Accroding to line 8, rsp + 64 .
+
+C.
+Because return address takes up 8 bytes, function process access s.a[0], s.a[1], s.p at rsp + 8, rsp + 16 and rsp + 24 respectively.
+
+D.
+It access r.u[0], r.u[1] and r.q at rdi, rdi + 8 and rdi + 16 respectively.
+
+E.
+
++-------+
+|r.q    | 80
++-------+
+|r.u[1] | 72
++-------+
+|r.u[0] | 64
++-------+
+...Unused
++-------+
+|   z   | 24
++-------+
+|   &z  | 16
++-------+
+|s.a[1] | 8
++-------+
+|s.a[0] | 0 rsp
++-------+
+
+F.
+Structure function argument is allocated on stack.
+The address of the return structure is passed as function argument and is returned.

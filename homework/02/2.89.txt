@@ -1,0 +1,16 @@
+A.
+Because double can represent all int, x == dx, they should be converted to the same value.
+
+B.
+When x == -2, y == INT_MAX, x - y overflows.
+
+C.
+double can hold the result, so it's always true.
+
+D.
+The result may be rounded, only the first 53 bits starting from the leading one bit will be kept.
+I did some test and found that when x, y, z are all non-negative,
+about one third of the times the expression is false.
+
+E.
+False when one is zero and the other is not.

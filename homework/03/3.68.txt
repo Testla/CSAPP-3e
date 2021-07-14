@@ -1,0 +1,7 @@
+From line 2 and line 3, we know that q->t is at q + 8 and q->u is at q + 32.
+Taking alignment into account, B is in range (4, 8], A is in range (6, 10].
+From line 4, we know that p->y is at p + 184.
+Size of str1.x is 4 * A * B and should be in range (176, 184].
+So A * B should be 45 or 46.
+46's divisors are 1, 2, 23, 46, so A * B is 45.
+B = 5 and A = 9.

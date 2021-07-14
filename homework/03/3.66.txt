@@ -1,0 +1,2 @@
+Line 5 is guarded-do, so NR(n) = 3 * n .
+Line 14 advances the pointer, we can infer that NC(n) = 4 * n + 1 .
